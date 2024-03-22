@@ -4,6 +4,8 @@ import './css/index.css';
 import './css/App.css';
 import SMBHeader from './components/SMBHeader';
 import reportWebVitals from './reportWebVitals';
+import Carousel from './components/Carousel';
+import {images} from './constants/CarouselData';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +14,8 @@ root.render(
       <div className="App">
         <SMBHeader />
         <section>
-          xx2
+          <Carousel data={images.slides} />
+          
         </section>
         <section>
           xx3
