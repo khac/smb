@@ -4,12 +4,14 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import InputAdornment from '@mui/material/InputAdornment';
 import Typography from '@mui/material/Typography';
 import parse from 'autosuggest-highlight/parse';
 import { debounce } from '@mui/material/utils';
+import SearchIcon from '@mui/icons-material/Search';
 import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
+import { ThemedButton } from '../Theme';
 
 function loadScript(src, position, id) {
   if (!position) {
@@ -156,11 +158,35 @@ const SMBHeader = () => {
           <img src={Logo} className='logo-img' />
           <div class='autocomplete'>
             <GoogleMaps props={{class:'locationAutocomplete'}} />
-            <TextField id="business" sx={{ width: '400px', marginLeft: '20px' }} label="Search for local business" variant="outlined" />
+            <TextField 
+                id="business" 
+                sx={{ width: '400px', marginLeft: '20px' }} 
+                label="Search for local business"  
+                InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <SearchIcon />
+                      </InputAdornment>
+                    ),
+            }}/>
           </div>
-          <Button variant="contained" size="small" sx={{ width: '150px', height: '50px', marginTop:"8px", float:"right", marginLeft: '300px' }}>
-            {"Login / Sign up"}
-          </Button>
+          <ThemedButton 
+            props={{
+                variant:"contained", 
+                size:"small", 
+                sx:{width: '150px', height: '50px', marginTop:"8px", float:"right", marginLeft: '270px'}
+            }}
+            text={"Login"} 
+          />
+          <ThemedButton 
+            props={{
+                variant:"contained", 
+                size:"small", 
+                sx:{width: '150px', height: '50px', marginTop:"8px", float:"right", marginLeft: '20px'}
+            }}
+            text={"Sign up"} 
+            color={"secondary"}
+          />
         </header>
         
         
