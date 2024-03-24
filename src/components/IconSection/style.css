@@ -1,0 +1,17 @@
+.icon-div {
+    border: 0.1px solid#ccc;
+    border-radius: 14px;
+    height: 75px;
+    width: 75px;
+    background: white;
+    
+}
+
+
+.icon-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111;
+    width: 75px;
+    overflow: auto;
+}
