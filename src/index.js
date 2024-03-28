@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './css/index.css';
 import './css/App.css';
 import SMBHeader from './components/SMBHeader';
+import SMBFooter from './components/SMBFooter';
 import reportWebVitals from './reportWebVitals';
 import Carousel from './components/Carousel';
 import IconSection from './components/IconSection';
+import CustomerReviews from './components/CustomerReviews';
+import MainCategories from './components/MainCategories';
 import {images} from './constants/CarouselData';
 
 import cr_cardetial from './assets/cr_cardetial.jpg';
@@ -40,10 +43,16 @@ root.render(
           </div>
         </section>
         <section>
-          xx3
+          <MainCategories />
+        </section>
+        <section>
+          <CustomerReviews />
         </section>
       </div>
     </body>
+    <section>
+      <SMBFooter />
+    </section>
 
   </React.StrictMode>
 );
