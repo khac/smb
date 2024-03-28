@@ -9,6 +9,7 @@ import Carousel from './components/Carousel';
 import IconSection from './components/IconSection';
 import CustomerReviews from './components/CustomerReviews';
 import MainCategories from './components/MainCategories';
+import HorizontalInfiniteScroll from './components/HorizontalInfiniteScroll';
 import {images} from './constants/CarouselData';
 
 import cr_cardetial from './assets/cr_cardetial.jpg';
@@ -49,6 +50,10 @@ root.render(
           <CustomerReviews />
         </section>
       </div>
+    
+    <section>
+      <HorizontalInfiniteScroll />
+    </section>
     </body>
     <section>
       <SMBFooter />

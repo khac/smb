@@ -20,13 +20,12 @@ const Footer = () => {
         <div className={Style.footer_box_social}>
           <img src={Logo} alt="footer logo" height={100} width={100} />
           <p>
+              <br />
               Welcome to LocalFinder, your go-to destination for discovering the vibrant tapestry of businesses in your community. 
               <br />
               Our mission is to connect you with the rich diversity of local establishments, from cozy cafes to bustling boutiques, each contributing to the unique character of your neighborhood.
-
-
           </p>
-
+          <br />
           <div className={Style.footer_social}>
             <a href="#">
               <TiSocialFacebook />
