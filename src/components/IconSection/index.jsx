@@ -7,7 +7,7 @@ const IconSection = () => {
     const data_two = images_two.icons;
     return (
         <div style={{display:"flex", flexDirection: "column"}}>
-        <div style={{display:"flex", flexDirection: "row"}}>
+        <div style={{display:"flex", flexDirection: "row", margin:"20px 0"}}>
         {data.map((item, idx) => {
             return (
               <div style={{marginLeft: "115px"}}>

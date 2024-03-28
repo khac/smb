@@ -11,6 +11,7 @@ import athlete from '../assets/athlete.png';
 import realtor from '../assets/agent.png';
 import doctor_icon from '../assets/clinic.png';
 import hairdresser from '../assets/hairdresser.png';
+import interior_design_icon from '../assets/interior-design.png';
 
 export const images_one = {
     "icons": [
@@ -31,7 +32,7 @@ export const images_one = {
         "text": "Real Estate Agent"
       },
       {
-        "src": packers_and_movers_icon,
+        "src": interior_design_icon,
         "text": "Interior Designer"
       },
       {

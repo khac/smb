@@ -28,13 +28,13 @@ root.render(
           <div className='image-section'>
             <Carousel data={images.slides} />
             <a href='.'>
-              <img src={cr_nurse} height='360px' width="200px" style={{margin: '40px 40px 20px', borderRadius: '5px'}} />
+              <img src={cr_nurse} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 40px', borderRadius: '5px'}} />
             </a>
             <a href='.'>
-              <img src={cr_handyman} height='360px' width="200px" style={{margin: '40px 0px 20px', borderRadius: '5px'}} />
+              <img src={cr_handyman} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 20px', borderRadius: '5px'}} />
             </a>
             <a href='.'>
-              <img src={cr_cardetial} height='360px' width="200px" style={{margin: '40px 40px 20px', borderRadius: '5px'}} />
+              <img src={cr_cardetial} style={{height:'auto', width:"200px" ,margin: '40px 20px  0 20px', borderRadius: '5px'}} />
             </a>
             
           </div>
