@@ -30,7 +30,7 @@ const IconSection = () => {
             );
         })}
         </div>
-        <div style={{display:"flex", flexDirection: "row"}}>
+        <div style={{display:"flex", flexDirection: "row", marginBottom: "40px"}}>
         {data_two.map((item, idx) => {
             return (
               <div style={{marginLeft: "100px", marginBottom:"20px"}}>

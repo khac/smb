@@ -21,8 +21,8 @@ function MainCategories(props) {
             <h1 className="text-2xl dark:text-gray-400">
                 {"Popular Categories"}
             </h1>
-            <div style={{"display": "flex", "flexDirection":'row', margin:"20px 40px", borderRadius:"5px"}}>
-                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", width:"50%", borderRadius:"15px"}}>
+            <div style={{"display": "flex", "flexDirection":'row', margin:"20px 40px",  borderRadius:"5px"}}>
+                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", padding:"20px", width:"50%", borderRadius:"15px"}}>
                     <CardWithText 
                         img = {'https://cdn.pixabay.com/photo/2017/04/21/01/43/painter-2247395_1280.jpg'}
                         heading={'Noteworthy technology acquisitions 2021'} 
@@ -39,7 +39,7 @@ function MainCategories(props) {
                         text={''}
                     />
                 </div>
-                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", width:"50%", borderRadius:"15px"}}>
+                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", padding:"20px", width:"50%", borderRadius:"15px"}}>
                     <CardWithText 
                         img = {'https://cdn.pixabay.com/photo/2017/04/21/01/43/painter-2247395_1280.jpg'}
                         heading={'Noteworthy technology acquisitions 2021'} 
@@ -60,7 +60,7 @@ function MainCategories(props) {
             </div>
             
             <div style={{"display": "flex", "flexDirection":'row', margin:"20px 40px"}}>
-                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", width:"50%", borderRadius:"15px"}}>
+                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", padding:"20px", width:"50%", borderRadius:"15px"}}>
                     <CardWithText 
                         img = {'https://cdn.pixabay.com/photo/2017/04/21/01/43/painter-2247395_1280.jpg'}
                         heading={'Noteworthy technology acquisitions 2021'} 
@@ -77,7 +77,7 @@ function MainCategories(props) {
                         text={''}
                     />
                 </div>
-                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", width:"50%", borderRadius:"15px"}}>
+                <div style={{"display": "flex", "flexDirection":'row', border: "0.1px solid grey", margin:"20px", padding:"20px", width:"50%", borderRadius:"15px"}}>
                     <CardWithText 
                         img = {'https://cdn.pixabay.com/photo/2017/04/21/01/43/painter-2247395_1280.jpg'}
                         heading={'Noteworthy technology acquisitions 2021'} 
