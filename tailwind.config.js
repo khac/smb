@@ -4,7 +4,11 @@ module.exports = {
   'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'main-blue': '#2C228C',
+      },
+    }
   },
   plugins: [
     require('flowbite/plugin'),

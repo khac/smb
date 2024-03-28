@@ -38,7 +38,7 @@ root.render(
             </a>
             
           </div>
-          <div className='image-section'>
+          <div className='icon-section'>
             <IconSection />        
           </div>
         </section>

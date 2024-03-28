@@ -10,7 +10,7 @@ const IconSection = () => {
         <div style={{display:"flex", flexDirection: "row", margin:"20px 0"}}>
         {data.map((item, idx) => {
             return (
-              <div style={{marginLeft: "115px"}}>
+              <div style={{marginLeft: "100px", marginBottom:"20px"}}>
               <div
                 alt={item.text}
                 key={idx}
@@ -33,7 +33,7 @@ const IconSection = () => {
         <div style={{display:"flex", flexDirection: "row"}}>
         {data_two.map((item, idx) => {
             return (
-              <div style={{marginLeft: "115px"}}>
+              <div style={{marginLeft: "100px", marginBottom:"20px"}}>
               <div
                 alt={item.text}
                 key={idx}

@@ -3,19 +3,25 @@
 @tailwind utilities;
 
 .icon-div {
-    border: 0.1px solid#ccc;
+    border: 1px solid#ccc;
     border-radius: 14px;
     height: 75px;
     width: 75px;
     background: white;
-    
+}
+
+.icon-div:hover {
+    box-shadow: 0 0 0 1px #2C228C;
+    background-color: azure;
+    transition: all 200ms ease-out;    
 }
 
 
 .icon-text {
     font-size: 14px;
-    font-weight: 400;
-    color: #111;
-    width: 75px;
+    font-weight: 600;
+    color: #2C228C;
+    width: 85px;
     overflow: auto;
+    margin: 10px 0 0;
 }
