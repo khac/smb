@@ -156,7 +156,7 @@ const SMBHeader = () => {
     return (
         <header className="AppHeader">
           <img src={Logo} className='logo-img' />
-          <div class='autocomplete'>
+          <div className='autocomplete'>
             <GoogleMaps props={{class:'locationAutocomplete'}} />
             <TextField 
                 id="business" 

@@ -20,9 +20,11 @@ const Footer = () => {
         <div className={Style.footer_box_social}>
           <img src={Logo} alt="footer logo" height={100} width={100} />
           <p>
-            The world’s first and largest digital marketplace for crypto
-            collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
-            exclusive digital items.
+              Welcome to LocalFinder, your go-to destination for discovering the vibrant tapestry of businesses in your community. 
+              <br />
+              Our mission is to connect you with the rich diversity of local establishments, from cozy cafes to bustling boutiques, each contributing to the unique character of your neighborhood.
+
+
           </p>
 
           <div className={Style.footer_social}>
@@ -63,8 +65,9 @@ const Footer = () => {
           </div>
           <div className={Style.subscribe_box_info}>
             <p>
-              Discover, collect, and sell extraordinary NFTs OpenSea is the
-              world first and largest NFT marketplace
+            Discover a local business near you.
+
+
             </p>
           </div>
         </div>
