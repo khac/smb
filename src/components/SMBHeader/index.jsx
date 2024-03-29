@@ -156,7 +156,7 @@ const GoogleMaps = ({className}) => {
 const SMBHeader = () => {
     return (
         <header className="AppHeader">
-          <img src={Logo} className='logo-img' />
+          <img src={Logo} className='logo-img' alt='Localfinder logo' />
           <div className='autocomplete'>
             <GoogleMaps props={{class:'locationAutocomplete'}} />
             <TextField 

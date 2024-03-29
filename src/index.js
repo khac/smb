@@ -47,13 +47,12 @@ root.render(
           <MainCategories />
         </section>
         <section>
-          <CustomerReviews />
-        </section>
-      
-        <section>
           <HorizontalInfiniteScroll />
         </section>
-
+        <section>
+          <MainCategories />
+          <CustomerReviews />
+        </section>
       </div>
     </body>
     <section>
