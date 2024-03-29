@@ -29,13 +29,13 @@ root.render(
           <div className='image-section'>
             <Carousel data={images.slides} />
             <a href='.'>
-              <img src={cr_nurse} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 40px', borderRadius: '5px'}} />
+              <img src={cr_nurse} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 40px', borderRadius: '5px'}} />
             </a>
             <a href='.'>
-              <img src={cr_handyman} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 20px', borderRadius: '5px'}} />
+              <img src={cr_handyman} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 20px', borderRadius: '5px'}} />
             </a>
             <a href='.'>
-              <img src={cr_cardetial} style={{height:'auto', width:"200px" ,margin: '40px 20px  0 20px', borderRadius: '5px'}} />
+              <img src={cr_cardetial} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px  0 20px', borderRadius: '5px'}} />
             </a>
             
           </div>
@@ -49,11 +49,12 @@ root.render(
         <section>
           <CustomerReviews />
         </section>
+      
+        <section>
+          <HorizontalInfiniteScroll />
+        </section>
+
       </div>
-    
-    <section>
-      <HorizontalInfiniteScroll />
-    </section>
     </body>
     <section>
       <SMBFooter />

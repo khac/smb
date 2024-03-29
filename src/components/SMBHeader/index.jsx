@@ -12,6 +12,7 @@ import { debounce } from '@mui/material/utils';
 import SearchIcon from '@mui/icons-material/Search';
 import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
 import { ThemedButton } from '../Theme';
+import Login from '../Login';
 
 function loadScript(src, position, id) {
   if (!position) {
@@ -170,14 +171,15 @@ const SMBHeader = () => {
                     ),
             }}/>
           </div>
-          <ThemedButton 
+          {/* <ThemedButton 
             props={{
                 variant:"contained", 
                 size:"small", 
                 sx:{width: '150px', height: '50px', marginTop:"8px", float:"right", marginLeft: '270px'}
             }}
             text={"Login"} 
-          />
+          /> */}
+          <Login />
           <ThemedButton 
             props={{
                 variant:"contained", 

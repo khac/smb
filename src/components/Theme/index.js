@@ -12,7 +12,7 @@ export const theme = createTheme({
 export const ThemedButton = ({props, text, color}) => {
     return (
         <ThemeProvider theme={theme}>
-            <Button {...props} color={color}>
+            <Button {...props} color={color} >
                 {text}
             </Button>
         </ThemeProvider>
