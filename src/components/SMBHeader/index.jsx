@@ -13,6 +13,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
 import { ThemedButton } from '../Theme';
 import Login from '../Login';
+import SignUp from '../SignUp';
 
 function loadScript(src, position, id) {
   if (!position) {
@@ -180,7 +181,7 @@ const SMBHeader = () => {
             text={"Login"} 
           /> */}
           <Login />
-          <ThemedButton 
+          {/* <ThemedButton 
             props={{
                 variant:"contained", 
                 size:"small", 
@@ -188,7 +189,8 @@ const SMBHeader = () => {
             }}
             text={"Sign up"} 
             color={"secondary"}
-          />
+          /> */}
+          <SignUp />
         </header>
         
         
