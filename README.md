@@ -6,4 +6,4 @@
 ## Getting Started LocalFinder
 Clone the project and install the dependencies
 
-### npm start
+### `npm start`
