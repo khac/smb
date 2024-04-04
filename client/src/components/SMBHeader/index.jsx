@@ -14,7 +14,7 @@ import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
 import { ThemedButton } from '../Theme';
 import Login from '../Login';
 import SignUp from '../SignUp';
-import saveSearchQuery from '../../mongodb/InsertSearchQuery';
+// import saveSearchQuery from '../../mongodb/InsertSearchQuery';
 
 function loadScript(src, position, id) {
   if (!position) {
