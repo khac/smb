@@ -14,6 +14,7 @@ import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
 import { ThemedButton } from '../Theme';
 import Login from '../Login';
 import SignUp from '../SignUp';
+import saveSearchQuery from '../../mongodb/InsertSearchQuery';
 
 function loadScript(src, position, id) {
   if (!position) {
@@ -29,8 +30,9 @@ function loadScript(src, position, id) {
 
 const autocompleteService = { current: null };
 
-const GoogleMaps = ({className}) => {
-    const [value, setValue] = useState(null);
+const GoogleMaps = ({className, value, setValue}) => {
+    // const [value, setValue] = useState(null);
+
     const [inputValue, setInputValue] = useState('');
     const [options, setOptions] = useState([]);
     const loaded = useRef(false);
@@ -154,42 +156,52 @@ const GoogleMaps = ({className}) => {
     );
   }
 
+
+
 const SMBHeader = () => {
+    const [value, setValue] = useState('');
+    const [businessName, setbusinessName] = useState('');
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        if (value !== "" && businessName !== "") {
+          console.log(value.description, businessName);
+          // saveSearchQuery(value.description, businessName);
+
+        }
+      }
+    }
+    
     return (
         <header className="AppHeader">
           <img src={Logo} className='logo-img' alt='Localfinder logo' />
           <div className='autocomplete'>
-            <GoogleMaps props={{class:'locationAutocomplete'}} />
+            <GoogleMaps 
+                className={{class:'locationAutocomplete'}}
+                value={value}
+                setValue={setValue} 
+            />
             <TextField 
                 id="business" 
                 sx={{ width: '400px', marginLeft: '20px' }} 
                 label="Search for local business"  
+                value={businessName}
+                onChange={(event) => {
+                  setbusinessName(event.target.value);
+                }}
                 InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
                         <SearchIcon />
                       </InputAdornment>
                     ),
-            }}/>
+                }}
+                onKeyDown={handleKeyDown}
+            />
           </div>
-          {/* <ThemedButton 
-            props={{
-                variant:"contained", 
-                size:"small", 
-                sx:{width: '150px', height: '50px', marginTop:"8px", float:"right", marginLeft: '270px'}
-            }}
-            text={"Login"} 
-          /> */}
+          
           <Login />
-          {/* <ThemedButton 
-            props={{
-                variant:"contained", 
-                size:"small", 
-                sx:{width: '150px', height: '50px', marginTop:"8px", float:"right", marginLeft: '20px'}
-            }}
-            text={"Sign up"} 
-            color={"secondary"}
-          /> */}
+          
           <SignUp />
         </header>
         
