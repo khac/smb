@@ -11,10 +11,9 @@ import parse from 'autosuggest-highlight/parse';
 import { debounce } from '@mui/material/utils';
 import SearchIcon from '@mui/icons-material/Search';
 import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
-import { ThemedButton } from '../Theme';
 import Login from '../Login';
 import SignUp from '../SignUp';
-// import saveSearchQuery from '../../mongodb/InsertSearchQuery';
+import saveSearchQuery from '../../mongodb/InsertSearchQuery'
 
 function loadScript(src, position, id) {
   if (!position) {
@@ -166,7 +165,7 @@ const SMBHeader = () => {
       if (event.key === 'Enter') {
         if (value !== "" && businessName !== "") {
           console.log(value.description, businessName);
-          // saveSearchQuery(value.description, businessName);
+          saveSearchQuery(value.description, businessName);
 
         }
       }
