@@ -16,50 +16,75 @@ import cr_cardetial from './assets/cr_cardetial.jpg';
 import cr_handyman from './assets/cr_handyman.jpg';
 import cr_nurse from './assets/cr_nurse.jpg';
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+
+
+const LandingPage = () => {
+  <React.StrictMode>
+  <body>
+    <div className="App">
+      <SMBHeader />
+      <section className="heading-section">
+        <h1 className='heading'>
+          Discover a local business near you.
+        </h1>
+        <div className='image-section'>
+          <Carousel data={images.slides} />
+          <a href='.'>
+            <img src={cr_nurse} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 40px', borderRadius: '5px'}} />
+          </a>
+          <a href='.'>
+            <img src={cr_handyman} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 20px', borderRadius: '5px'}} />
+          </a>
+          <a href='.'>
+            <img src={cr_cardetial} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px  0 20px', borderRadius: '5px'}} />
+          </a>
+          
+        </div>
+        <div className='icon-section'>
+          <IconSection />        
+        </div>
+      </section>
+      <section>
+        <MainCategories />
+      </section>
+      <section>
+        <HorizontalInfiniteScroll />
+      </section>
+      <section>
+        <MainCategories />
+        <CustomerReviews />
+      </section>
+    </div>
+  </body>
+  <section>
+    <SMBFooter />
+  </section>
+
+</React.StrictMode>
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <LandingPage />
+    ),
+  },
+  {
+    path: "search",
+    element: <div>About</div>,
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <body>
-      <div className="App">
-        <SMBHeader />
-        <section className="heading-section">
-          <h1 className='heading'>
-            Discover a local business near you.
-          </h1>
-          <div className='image-section'>
-            <Carousel data={images.slides} />
-            <a href='.'>
-              <img src={cr_nurse} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 40px', borderRadius: '5px'}} />
-            </a>
-            <a href='.'>
-              <img src={cr_handyman} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px 0 20px', borderRadius: '5px'}} />
-            </a>
-            <a href='.'>
-              <img src={cr_cardetial} alt={""} style={{height:'auto', width:"200px" ,margin: '40px 20px  0 20px', borderRadius: '5px'}} />
-            </a>
-            
-          </div>
-          <div className='icon-section'>
-            <IconSection />        
-          </div>
-        </section>
-        <section>
-          <MainCategories />
-        </section>
-        <section>
-          <HorizontalInfiniteScroll />
-        </section>
-        <section>
-          <MainCategories />
-          <CustomerReviews />
-        </section>
-      </div>
-    </body>
-    <section>
-      <SMBFooter />
-    </section>
-
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );
 
 // If you want to start measuring performance in your app, pass a function
