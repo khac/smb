@@ -14,6 +14,9 @@ import {GOOGLE_MAPS_API_KEY} from '../../constants/api_key';
 import Login from '../Login';
 import SignUp from '../SignUp';
 import saveSearchQuery from '../../mongodb/InsertSearchQuery'
+import { useNavigate } from "react-router-dom";
+
+
 
 function loadScript(src, position, id) {
   if (!position) {
@@ -160,13 +163,14 @@ const GoogleMaps = ({className, value, setValue}) => {
 const SMBHeader = () => {
     const [value, setValue] = useState('');
     const [businessName, setbusinessName] = useState('');
+    const navigate = useNavigate();
 
     const handleKeyDown = (event) => {
       if (event.key === 'Enter') {
         if (value !== "" && businessName !== "") {
           console.log(value.description, businessName);
           saveSearchQuery(value.description, businessName);
-
+          navigate(`/search/${value.description}/${businessName}`)
         }
       }
     }

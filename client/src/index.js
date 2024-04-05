@@ -18,13 +18,11 @@ import cr_nurse from './assets/cr_nurse.jpg';
 
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
+  RouterProvider
 } from "react-router-dom";
 
 
-const LandingPage = () => {
+const LandingPage = () => (
   <React.StrictMode>
   <body>
     <div className="App">
@@ -67,19 +65,20 @@ const LandingPage = () => {
   </section>
 
 </React.StrictMode>
-};
+);
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <LandingPage />
-    ),
-  },
-  {
-    path: "search",
-    element: <div>About</div>,
-  },
+    element: <LandingPage />,
+    children: [
+      {
+        path: "search/:location/:businessName",
+        element: <div>About</div>,
+        loader: <div>About</div>,
+      },
+    ],
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
