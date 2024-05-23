@@ -7,3 +7,4 @@
 Clone the project and install the dependencies
 
 ### `npm start`
+To start this project on your local machine hit `npm start`
